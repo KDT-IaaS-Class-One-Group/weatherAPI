@@ -17,6 +17,8 @@ const deajeonFetch = async () => {
       const temperature = data.main.temp; // 온도
       const humidity = data.main.humidity; // 습도
 
+      return { temperature, humidity };
+
     }
     catch(error) {
       console.error("날씨 정보 가져올 수 없습니다.");
