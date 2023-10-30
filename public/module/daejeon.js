@@ -8,7 +8,12 @@ const deajeonFetch = async () => {
   // API 요청
   try {
       const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
-      
+
+      if (!response.ok) {
+        throw new Error ("네트워크 오류 발생");
+      }
+
+      const data = response.json();
 
     }
     catch(error) {
