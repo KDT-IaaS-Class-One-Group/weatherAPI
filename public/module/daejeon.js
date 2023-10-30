@@ -12,9 +12,9 @@ const getWeatherDaejeon = async () => {
 
       const data = await response.json();
       // console.log(data);
-      const temperature = data.main.temp; // 온도
-      const humidity = data.main.humidity; // 습도
-      return { temperature, humidity };
+      const daejoenTemp = data.main.temp; // 온도
+      const daejeonHumi = data.main.humidity; // 습도
+      return { daejoenTemp, daejeonHumi };
 
     }
     catch(error) {
