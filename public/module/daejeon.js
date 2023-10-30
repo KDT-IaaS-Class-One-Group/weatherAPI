@@ -1,6 +1,4 @@
-// console.log('hi');
-
-const deajeonFetch = async () => {
+const getWeatherDaejeon = async () => {
   const daejeon_apiKey = 'af424409722cecb0056cea43492fb33c'; // 본인의 API 키로 대체
   const deajeon_city = 'daejeon'; // 원하는 도시명으로 변경 가능
 

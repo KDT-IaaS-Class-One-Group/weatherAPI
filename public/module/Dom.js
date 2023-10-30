@@ -1,4 +1,5 @@
 import { getWeatherData } from './seoul.js';
+
 getWeatherData() 
     .then(data => {
         console.log(`서울 온도: ${data.seoulTemp}°C`);

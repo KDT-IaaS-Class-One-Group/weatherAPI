@@ -1,4 +1,4 @@
-export function getWeatherData() {
+export function getWeatherSeoul() {
     // OpenWeatherMap API 키
     const apiKeyseoul = 'af424409722cecb0056cea43492fb33c'; // 본인의 API 키로 대체해야 합니다.
 
@@ -19,3 +19,4 @@ export function getWeatherData() {
         });
 }
 
+// console.log(getWeatherData());
