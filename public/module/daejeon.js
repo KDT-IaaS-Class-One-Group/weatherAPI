@@ -1,4 +1,4 @@
-const getWeatherDaejeon = async () => {
+export const getWeatherDaejeon = async () => {
   const daejeon_apiKey = 'af424409722cecb0056cea43492fb33c'; // 본인의 API 키로 대체
   const deajeon_city = 'daejeon'; // 원하는 도시명으로 변경 가능
 
@@ -12,9 +12,9 @@ const getWeatherDaejeon = async () => {
 
       const data = await response.json();
       // console.log(data);
-      const daejoenTemp = data.main.temp; // 온도
+      const daejeonTemp = data.main.temp; // 온도
       const daejeonHumi = data.main.humidity; // 습도
-      return { daejoenTemp, daejeonHumi };
+      return { daejeonTemp, daejeonHumi };
 
     }
     catch(error) {
