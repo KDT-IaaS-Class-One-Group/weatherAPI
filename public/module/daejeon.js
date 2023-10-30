@@ -1,19 +1,19 @@
 // console.log('hi');
 
 const deajeonFetch = async () => {
-  // 필요한 변수 설정
-  const apiKey = 'af424409722cecb0056cea43492fb33c'; // 본인의 API 키로 대체
-  const city = 'daejeon'; // 원하는 도시명으로 변경 가능
+  const daejeon_apiKey = 'af424409722cecb0056cea43492fb33c'; // 본인의 API 키로 대체
+  const deajeon_city = 'daejeon'; // 원하는 도시명으로 변경 가능
 
   // API 요청
   try {
-      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`)
+      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${deajeon_city}&appid=${daejeon_apiKey}&units=metric`)
 
       if (!response.ok) {
         throw new Error ("네트워크 오류 발생");
       }
 
-      const data = response.json();
+      const data = await response.json();
+      // console.log(data);
       const temperature = data.main.temp; // 온도
       const humidity = data.main.humidity; // 습도
 
@@ -25,5 +25,5 @@ const deajeonFetch = async () => {
     }
 }
 
-deajeonFetch().then( result => console.log(result));
+deajeonFetch().then( result => console.log(result.temperature, result.humidity));
 
