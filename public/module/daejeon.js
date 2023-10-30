@@ -16,7 +16,6 @@ const deajeonFetch = async () => {
       // console.log(data);
       const temperature = data.main.temp; // 온도
       const humidity = data.main.humidity; // 습도
-
       return { temperature, humidity };
 
     }
@@ -25,5 +24,6 @@ const deajeonFetch = async () => {
     }
 }
 
-deajeonFetch().then( result => console.log(result.temperature, result.humidity));
+// ! 작성법, then을 통한 result.temp 혹은 result.humi 가 필요하다. 개선 필요
+// deajeonFetch().then( result => console.log(result.temperature, result.humidity));
 
