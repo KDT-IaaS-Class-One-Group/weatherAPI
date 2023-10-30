@@ -7,7 +7,7 @@ const seoul = 'Seoul'; // 원하는 도시로 변경할 수 있습니다.
 // API 요청을 보내고 데이터를 가져옵니다.
 fetch(`http://api.openweathermap.org/data/2.5/weather?q=${seoul}&appid=${apiKeyseoul}&units=metric`)
     .then(response => response.json())
-    .then(data => {
+    .then(data => { 
         const seoulTemp = data.main.temp; // 온도
         const seoulHumi = data.main.humidity; // 습도
     })
