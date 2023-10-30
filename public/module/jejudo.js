@@ -13,8 +13,8 @@ const humidity = data.main.humidity;
 const jejuHumidity = document.getElementById('jeju-humidity')
 const jejuTemperature = document.getElementById('jeju-temperature')
 
-jejuHumidity = data.main.humidity
-jejuTemperature = data.main.temperature
+jejuHumidity.textContent = temperature
+jejuTemperature.textContent = humidity
 }) 
 
 .catch(error => { console.error("날씨 정보를 가져오는데 실패했습니다.", error); }); 
