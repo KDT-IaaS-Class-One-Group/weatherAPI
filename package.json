@@ -1,4 +1,4 @@
-{  "type": "module",
+{  
   "name": "weatherapi",
   "version": "1.0.0",
   "main": "app.js",

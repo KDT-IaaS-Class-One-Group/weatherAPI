@@ -4,11 +4,11 @@ const path = require('path');
 const app = express();
 
 // 정적 파일들을 제공하기 위한 설정
-app.use('/public', express.static(path.join(__dirname, 'public','static')));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // 메인 라우팅
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public','static', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 const PORT = 3000;
