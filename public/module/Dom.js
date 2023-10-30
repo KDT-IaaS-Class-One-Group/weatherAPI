@@ -1,4 +1,4 @@
-import { getWeatherData } from './seoul.js'
+import { getWeatherData } from './seoul.js';
 getWeatherData() 
     .then(data => {
         console.log(`서울 온도: ${data.seoulTemp}°C`);
@@ -10,7 +10,8 @@ getWeatherData()
     
 
 // 서울 온도, 습도 설정
-// document.getElementById('seoul-temperature').textContent 
+const seoulTemperatureElement = document.getElementById('seoul-temperature');
+seoulTemperatureElement.textContent = data.seoulTemp
 
 // document.getElementById('seoul-humidity').textContent = `${seoul.seoulHumi}%`;
 //   // 대전 온도, 습도 설정
