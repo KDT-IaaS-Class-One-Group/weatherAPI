@@ -14,6 +14,8 @@ const deajeonFetch = async () => {
       }
 
       const data = response.json();
+      const temperature = data.main.temp; // 온도
+      const humidity = data.main.humidity; // 습도
 
     }
     catch(error) {
