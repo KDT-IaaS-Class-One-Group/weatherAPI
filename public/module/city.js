@@ -1,5 +1,5 @@
 // city.js
-async function fetchWeatherData(inputValue) {
+export async function fetchWeatherData(inputValue) {
   try {
     const apikey = '13e787bc80632c2e192c0e6abff23bee';
     const city = inputValue; // 원하는 도시 이름으로 변경
