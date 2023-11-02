@@ -3,6 +3,11 @@ const path = require('path');
 
 const app = express();
 
+mongoose.connect('mongodb://localhost/your-database-name', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
 // 정적 파일들을 제공하기 위한 설정
 app.use(express.static(path.join(__dirname, 'public')));
 
