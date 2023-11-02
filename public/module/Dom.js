@@ -1,6 +1,14 @@
 // Dom.js
-import { fetchWeatherData } from "./city.js";
+import { fetchWeatherData } from "./weatherCityInfo.js";
+import { getMap } from "./mapAPI.js"
 
+// 로드될 때 fetch로 가져온 mapAPI의 createMap()함수를 사용해서 맵 제작 
+document.addEventListener('DOMContentLoaded',()=>{
+  getMap()
+})
+
+
+// submit 제출 했을 때 날씨데이터 가져오는 기능 추가.
 document.getElementById('city-form').addEventListener('submit', function (submit) {
   submit.preventDefault(); // 폼 제출 기본 동작 막기
   const cityInput = document.getElementById('city-input');
