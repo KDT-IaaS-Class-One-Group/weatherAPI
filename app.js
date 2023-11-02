@@ -20,3 +20,21 @@ const PORT = 3000;
 app.listen(PORT, () => {
     console.log(`Server구동 중~ http://localhost:${PORT}`);
 });
+
+const itemSchema = new mongoose.Schema({
+    name: String,
+    description: String,
+    price: Number,
+});
+
+const Item = mongoose.model('Item', itemSchema);
+
+app.get('/items', (req, res) => {
+    Item.find({}, (err, items) => {
+        if (err) {
+            console.error('데이터 조회 중 오류:', err);
+        } else {
+            res.json(items);
+        }
+    });
+});
